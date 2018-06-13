@@ -11,4 +11,4 @@ RUN apt-get install -y \
   
 RUN [ "cross-build-end" ]  
  
-CMD /bin/bash ; sleep infinit
+CMD /bin/bash ; sleep infinity
