@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian:latest
 MAINTAINER "Ugly-Wan" <oliver@mcblain.co.uk>
 
-ARG ARCH=armhf
+RUN [ "cross-build-start" ]
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -9,5 +9,6 @@ RUN apt-get install -y \
   alsa-utils \
   && rm -rf /var/lib/apt/lists/*
   
+RUN [ "cross-build-end" ]  
  
 CMD /bin/bash ; sleep infinit
