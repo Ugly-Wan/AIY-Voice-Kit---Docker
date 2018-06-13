@@ -1,6 +1,8 @@
 FROM resin/rpi-raspbian:latest
 MAINTAINER "Ugly-Wan" <oliver@mcblain.co.uk>
 
+ARG ARCH=armhf
+
 RUN apt-get update
 RUN apt-get install -y \
   curl \
