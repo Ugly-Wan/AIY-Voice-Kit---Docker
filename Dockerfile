@@ -16,13 +16,13 @@ RUN apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /home/pi \
-  && cd /home/pi
-  && git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python \
+  && cd /home/pi \
+  && git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
 
 RUN RUN cd /home/pi/AIY-projects-python \
   && python3 -m venv env \
   && env/bin/python -m pip install --upgrade pip numpy rpi.gpio google_auth_oauthlib google-assistant-library setuptools wheel
-  && env/bin/pip install -r requirements.txt
+  && env/bin/pip install -r requirements.txt \
   && echo "/home/pi/AIY-projects-python/src" > /home/pi/AIY-projects-python/env/lib/python3.5/site-packages/aiy.pth
   
 RUN [ "cross-build-end" ]  
