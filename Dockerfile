@@ -13,7 +13,7 @@ RUN apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN cd ~
-RUN git clone -b  https://github.com/google/aiyprojects-raspbian.git
+RUN git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
 RUN cd ~/AIY-projects-python
 
 RUN python3 -m venv env
