@@ -18,7 +18,7 @@ RUN cd ~ \
   && cd ~/AIY-projects-python
 
 RUN python3 -m venv env \
-  && env/bin/python -m pip install --upgrade pip rpi.gpio numpy setuptools wheel
+  && env/bin/python -m pip install --upgrade pip setuptools wheel
   
 RUN [ "cross-build-end" ]  
  
