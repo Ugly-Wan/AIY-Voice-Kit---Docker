@@ -11,6 +11,7 @@ RUN apt-get install -y \
   python3 \
   python3-dev \
   python3-venv \
+  build-essential \
   && rm -rf /var/lib/apt/lists/*
 
 RUN cd ~ \
