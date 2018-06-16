@@ -14,11 +14,11 @@ RUN apt-get install -y \
   build-essential \
   && rm -rf /var/lib/apt/lists/*
 
-RUN cd ~ \
+RUN mkdir /home/pi \
+  && cd /home/pi
   && git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python \
-  && cd ~/AIY-projects-python
 
-RUN RUN cd ~ \
+RUN RUN cd /home/pi/AIY-projects-python \
   && python3 -m venv env \
   && env/bin/python -m pip install --upgrade pip numpy rpi.gpio setuptools wheel
   
